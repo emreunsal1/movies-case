@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
-import { fetchMovies } from "../utils/movie-service";
+import { searchMovies } from "../utils/movie-service";
 import { IMovie } from "./../interfaces";
 
 const Home: NextPage = () => {
@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);
 
   const searchOnClick = async () => {
-    const response = await fetchMovies(keyword);
+    const response = await searchMovies(keyword);
     console.log(response);
     setMovies(response);
   };
