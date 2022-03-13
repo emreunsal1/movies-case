@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "../components/Button";
 import { searchMoviesClient } from "../utils/movie-service";
 import { IMovie } from "./../interfaces";
-import SearchInput from "../components/SearchInput";
+import SearchInput from "../components/SearchBar";
 
 const Home: NextPage = () => {
   const [keyword, setKeyword] = useState("");
