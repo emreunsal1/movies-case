@@ -1,2 +1,7 @@
-$paragraph-size: 16px;
-$title-size: $paragraph-size * 2;
+$small-spacing: 4pwx;
+$medium-spacing: $small-spacing * 2; // 8
+$large-spacing: $small-spacing * 4; // 16
+$xlarge-spacing: $small-spacing * 6; // 32
+
+$paragraph-size: $large-spacing;
+$title-size: $xlarge-spacing;

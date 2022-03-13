@@ -3,8 +3,10 @@
 @import "./colors.scss";
 @import "./constants.scss";
 @import "./button.scss";
+@import "./search-bar.scss";
 
 body {
   color: $black;
+  background-color: $body-background;
   font-size: $paragraph-size;
 }
