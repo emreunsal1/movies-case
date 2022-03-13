@@ -1,6 +1,6 @@
-import axios from "axios";
 import type { NextPage } from "next";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Button from "../components/Button";
 import { searchMovies } from "../utils/movie-service";
 import { IMovie } from "./../interfaces";
 
@@ -10,17 +10,16 @@ const Home: NextPage = () => {
 
   const searchOnClick = async () => {
     const response = await searchMovies(keyword);
-    console.log(response);
     setMovies(response);
   };
   return (
     <div>
       <input placeholder="search" onChange={(e) => setKeyword(e.target.value)}></input>
-      <button onClick={searchOnClick}>Search</button>
+      <Button onClick={searchOnClick}>Search</Button>
       <ul>
-        {movies.map((movie) => {
-          return <li key={movie.imdbID}>{movie.Title}</li>;
-        })}
+        {movies.map((movie) => (
+          <li key={movie.imdbID}>{movie.Title}</li>
+        ))}
       </ul>
     </div>
   );

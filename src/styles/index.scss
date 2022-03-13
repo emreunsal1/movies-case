@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Montserrat:wght@300;500;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@import "./colors.scss";
+@import "./constants.scss";
+@import "./button.scss";
+
+body {
+  color: $black;
+  font-size: $paragraph-size;
+}
