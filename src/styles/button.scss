@@ -1,11 +1,15 @@
 .m-button {
   font-family: "Poppins";
+  font-size: 16px;
+  line-height: $small-line-height;
+  margin: $medium-spacing;
   background-color: $green;
   text-align: center;
   color: white;
   border: none;
   padding: $medium-spacing $large-spacing;
   border-radius: $xlarge-spacing;
+  cursor: pointer;
   &:hover {
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
   }

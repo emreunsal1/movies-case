@@ -4,9 +4,56 @@
 @import "./constants.scss";
 @import "./button.scss";
 @import "./search-bar.scss";
+@import "./card.scss";
+@import "./list-element.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   color: $black;
   background-color: $body-background;
   font-size: $paragraph-size;
+  font-family: "Poppins";
+}
+
+.App {
+  width: 30%;
+  margin: 0 auto;
+
+  .search-contianer {
+    margin-bottom: $xlarge-spacing;
+    .header {
+      margin-bottom: $xlarge-spacing;
+    }
+    .button-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: flex-end;
+      .m-clear-button {
+        color: $green;
+        font-weight: 600;
+        width: 42px;
+        height: 24px;
+        line-height: $small-line-height;
+        cursor: pointer;
+      }
+    }
+  }
+  .list {
+    .list-container {
+      .list-header {
+        align-items: center;
+      }
+      .list-item {
+        margin: $small-spacing 0;
+        padding: 8px 0;
+      }
+    }
+  }
 }
