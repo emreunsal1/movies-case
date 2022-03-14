@@ -35,9 +35,11 @@ const Home: NextPage = () => {
           </Typography>
         </div>
         <Card>
-          <Typography fontWeight={600} size="16px" lineHeight="24px">
-            Movie Title
-          </Typography>
+          <div className="movie-title">
+            <Typography fontWeight={600} size="16px" lineHeight="24px">
+              Movie Title
+            </Typography>
+          </div>
           <SearchInput state={keyword} onChange={(e) => setKeyword(e.target.value)} placeholder="Search" />
           <div className="button-container">
             <div className="m-clear-button" onClick={clearOnclick}>
