@@ -30,14 +30,19 @@ body {
     .header {
       margin-bottom: $xlarge-spacing;
     }
+    .movie-title {
+      margin-bottom: $medium-spacing;
+    }
     .button-container {
       width: 100%;
       display: flex;
       align-items: center;
       text-align: center;
       justify-content: flex-end;
+      margin-top: $medium-spacing;
       .m-clear-button {
         color: $green;
+        margin-right: $medium-spacing;
         font-weight: 600;
         width: 42px;
         height: 24px;
@@ -50,9 +55,9 @@ body {
     .list-container {
       .list-header {
         align-items: center;
+        margin-bottom: $small-spacing;
       }
       .list-item {
-        margin: $small-spacing 0;
         padding: 8px 0;
       }
     }
