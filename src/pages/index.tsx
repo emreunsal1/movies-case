@@ -11,34 +11,29 @@ import ListElement from "../components/ListElement";
 const Home: NextPage = () => {
   const [keyword, setKeyword] = useState("");
   const [movies, setMovies] = useState<IMovie[]>([]);
-  const [isResults, setIsResults] = useState(false);
+  const hasMovies = movies.length > 0;
 
   const searchOnClick = async () => {
-    setIsResults(true);
     const response = await searchMoviesClient(keyword);
     setMovies(response);
-    setKeyword("");
   };
   const clearOnclick = () => {
-    setIsResults(false);
+    setMovies([]);
+    setKeyword("");
   };
 
   return (
     <div className="App">
-      <div className="search-contianer">
+      <div className="search-container">
         <div className="header">
           <Typography fontWeight={500} size="32px" lineHeight="48px">
             OMDb API
           </Typography>
-          <Typography fontWeight={400} size="16px" lineHeight="24px">
-            The Open Movie Database 🍿
-          </Typography>
+          <Typography>The Open Movie Database 🍿</Typography>
         </div>
         <Card>
           <div className="movie-title">
-            <Typography fontWeight={600} size="16px" lineHeight="24px">
-              Movie Title
-            </Typography>
+            <Typography fontWeight={600}>Movie Title</Typography>
           </div>
           <SearchInput state={keyword} onChange={(e) => setKeyword(e.target.value)} placeholder="Search" />
           <div className="button-container">
@@ -53,18 +48,18 @@ const Home: NextPage = () => {
         <div className="list-container">
           <Card>
             <div className="list-header">
-              <Typography fontWeight={600} lineHeight="24px" size="16px">
-                {isResults ? "Results for “search”" : "Search results will appear here"}
+              <Typography fontWeight={600} lineHeight="24px" size="16px" style={{ color: "#000" }}>
+                {hasMovies ? `Results for “${keyword}”` : "Search results will appear here"}
               </Typography>
-              {isResults && (
-                <Typography fontWeight={400} lineHeight="18px" size="12px">
+              {hasMovies && (
+                <Typography lineHeight="18px" size="12px">
                   click on a movie title to learn more about it
                 </Typography>
               )}
             </div>
-            <div className="list-item" style={{ display: isResults ? "block" : "none" }}>
+            <div className="list-content" style={{ display: hasMovies ? "block" : "none" }}>
               {movies.map((movie) => (
-                <ListElement>{movie.Title}</ListElement>
+                <ListElement key={movie.imdbID}>{movie.Title}</ListElement>
               ))}
             </div>
           </Card>
