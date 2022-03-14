@@ -3,7 +3,10 @@ $medium-spacing: $small-spacing * 2; // 8
 $large-spacing: $small-spacing * 4; // 16
 $xlarge-spacing: $small-spacing * 6; // 32
 
-$paragraph-size: $large-spacing;
-$small-line-height: $small-spacing * 6; //24
+$paragraph-size: 16px;
+$title-size: $paragraph-size * 2; //32
+
+$small-line-height: 24px;
 $large-line-height: $small-line-height * 2; //48
-$title-size: $xlarge-spacing;
+
+$border-radius: 8px;

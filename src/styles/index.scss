@@ -24,7 +24,7 @@ body {
   width: 30%;
   margin: 0 auto;
 
-  .search-contianer {
+  .search-container {
     margin: $xlarge-spacing 0px;
 
     .header {
@@ -42,7 +42,7 @@ body {
       margin-top: $medium-spacing;
       .m-clear-button {
         color: $green;
-        margin-right: $medium-spacing;
+        margin-right: $large-spacing;
         font-weight: 600;
         width: 42px;
         height: 24px;
@@ -55,10 +55,15 @@ body {
     .list-container {
       .list-header {
         align-items: center;
-        margin-bottom: $small-spacing;
+        .m-typography {
+          &:not(:last-child) {
+            margin-bottom: $medium-spacing;
+          }
+        }
       }
-      .list-item {
-        padding: 8px 0;
+      .list-content {
+        margin-top: $large-spacing;
+        padding: $small-spacing 0;
       }
     }
   }
