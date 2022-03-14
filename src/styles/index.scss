@@ -25,7 +25,8 @@ body {
   margin: 0 auto;
 
   .search-contianer {
-    margin-bottom: $xlarge-spacing;
+    margin: $xlarge-spacing 0px;
+
     .header {
       margin-bottom: $xlarge-spacing;
     }
