@@ -1,5 +1,9 @@
-import React from "react";
+import React, { ReactChild } from "react";
 
-export default function Card({ children }: any) {
+interface ICardProps {
+  children: ReactChild[];
+}
+
+export default function Card({ children }: ICardProps) {
   return <div className="m-card">{children}</div>;
 }
