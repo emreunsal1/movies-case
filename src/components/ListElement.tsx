@@ -7,9 +7,7 @@ interface IListElement {
 export default function ListElement({ children }: IListElement) {
   return (
     <div className="m-list-item">
-      <Typography size="16px" lineHeight="24px" fontWeight={400}>
-        {children}
-      </Typography>
+      <Typography>{children}</Typography>
     </div>
   );
 }
